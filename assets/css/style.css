@@ -1,0 +1,73 @@
+body {
+    background-position-x: 75px;
+    height: 2000px;
+    background: #5a5b5b;
+    background-image: url("http://minionswallpaper.com/Download-Wallpapers/game-of-thrones-wallpapers-desktop-background-To-Download-Wallpaper.jpg" );
+}
+
+header {
+    background-color: rgba(104, 13, 116, 0.2);
+    border-color: #cccccc;
+    height: 67px;
+    border-bottom-color: #666666;
+    margin-left: 0;
+    position: fixed;
+    top:  0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    background-image: url("http://minionswallpaper.com/Download-Wallpapers/game-of-thrones-wallpapers-desktop-background-To-Download-Wallpaper.jpg");
+}
+.icon {
+    /* border: 1px solid; */
+    background: rgba(64,68,62,.7);
+    color: rgba(218,165,32);
+    font-size: 40px;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: .35rem;
+}
+.quiz_container {
+    border: 1px solid;
+    height: 1000px;
+    background-color: rgba(128,128,128,.6);
+    margin-bottom: 20px;
+    border-radius: .35rem;
+    padding: auto 60;
+    margin-top: 145px;
+}
+
+ul {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.questions {
+    font-size: 40px;
+    text-align: center;
+}
+
+.answers {
+    margin-bottom: 40px;
+}
+
+.form-check {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.submit_button {
+    margin-left: 33.3%;
+}
+
+.results {
+    font-size: 20px;
+    text-align: center;
+}
+
+.images {
+    align-content: center;
+}
+
+
