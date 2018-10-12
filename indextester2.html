@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game!</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Trivia Game!</h1>
+
+    <div id="intro">
+        <button id="start">Get Started!</button>
+    </div>
+
+    <div id="trivia" class="hidden">
+        <h3>Time: <span id="timer"></span> Seconds</h3>
+        <div id="questions"></div>
+    </div>
+
+    <!-- <form action="/action_page.php">
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other<br>
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        var time = 10;
+        var timeInterval;
+        var questions = [
+            {
+                question: "Am I Awesome?",
+                answers: ["No", "Heck No", "Yes", "Heck Yes"],
+                answerIndex: 3
+            },
+            {
+                question: "Am I Not Awesome?",
+                answers: ["No", "Heck No", "Yes", "Heck Yes"],
+                answerIndex: 1
+            },
+            {
+                question: "Do you love kittens",
+                answers: ["Yes", "Heck Yes"],
+                answerIndex: 1
+            }
+        ];
+
+        $("#timer").text(time);
+        renderQuestions();
+
+        $("#start").on("click", function () {
+            $("#intro").addClass("hidden");
+            $("#trivia").removeClass("hidden");
+
+            timeInterval = setInterval(function () {
+                time--;
+                if (time === 0) {
+                    clearInterval(timeInterval);
+                    checkTrivia();
+                }
+                $("#timer").text(time);
+            }, 1000);
+        });
+
+        function renderQuestions() {
+
+            questions.forEach(function (question, index) {
+                var $form = $("<form>");
+                var $question = $("<h3>").text(question.question);
+
+                $form.append($question);
+
+                question.answers.forEach(function (answer, i) {
+                    var $input = $('<input type="radio">');
+                    $input.attr("value", answer);
+                    $input.attr("name", index);
+                    $form.append($input);
+                    $form.append(answer);
+                });
+
+                $("#questions").append($form);
+            });
+        }
+
+        function checkTrivia(){
+            var $forms = $("form");
+            $forms.each(function(i, elem){
+                $(elem).find("input:checked").each(function(i, elem){
+                    console.log(elem);
+                });
+            })
+        }
+
+    </script>
+</body>
+
+</html>

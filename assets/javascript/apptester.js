@@ -76,6 +76,7 @@ var correctAnswers = 0;
 
 function setupOptions() {
   $('#question').html(parseInt(currentquestion) + 1 + ". " + allQuestions[currentquestion].question);
+  console.log(allQuestions[currentquestion].question);
   var options = allQuestions[currentquestion].choices;
   var formHtml = '';
   for (var i = 0; i < options.length; i++) {
@@ -100,12 +101,12 @@ $(document).ready(function() {
     $(this).hide();
   });
 
-  $(function() {
-    $("#progressbar").progressbar({
-      max: allQuestions.length - 1,
-      value: 0
-    });
-  });
+  // $(function() {
+  //   $("#progressbar").progressbar({
+  //     max: allQuestions.length - 1,
+  //     value: 0
+  //   });
+  // });
 
   setupOptions();
 
@@ -113,11 +114,11 @@ $(document).ready(function() {
     event.preventDefault();
     checkAns();
     currentquestion++;
-    $(function() {
-      $("#progressbar").progressbar({
-        value: currentquestion
-      });
-    });
+    // $(function() {
+    //   $("#progressbar").progressbar({
+    //     value: currentquestion
+    //   });
+    // });
     if (currentquestion < allQuestions.length) {
       setupOptions();
       if (currentquestion == allQuestions.length - 1) {

@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cinzel');
+
+
+
+
 body {
     background-position-x: 75px;
     height: 2000px;
     background: #5a5b5b;
     background-image: url("http://minionswallpaper.com/Download-Wallpapers/game-of-thrones-wallpapers-desktop-background-To-Download-Wallpaper.jpg" );
+    font-family: 'Cinzel', serif;
 }
 
 header {
     background-color: rgba(104, 13, 116, 0.2);
     border-color: #cccccc;
-    height: 67px;
+    height: 114px;
     border-bottom-color: #666666;
     margin-left: 0;
     position: fixed;
@@ -17,12 +23,13 @@ header {
     z-index: 3;
     display: flex;
     background-image: url("http://minionswallpaper.com/Download-Wallpapers/game-of-thrones-wallpapers-desktop-background-To-Download-Wallpaper.jpg");
+
 }
 .icon {
     /* border: 1px solid; */
     background: rgba(64,68,62,.7);
     color: rgba(218,165,32);
-    font-size: 40px;
+    font-size: 30px;
     padding-top: 10px;
     text-align: center;
     border-radius: .35rem;
@@ -30,7 +37,7 @@ header {
 .quiz_container {
     border: 1px solid;
     height: 1000px;
-    background-color: rgba(128,128,128,.6);
+    background-color: rgba(128,128,128,.8);
     margin-bottom: 20px;
     border-radius: .35rem;
     padding: auto 60;
@@ -51,10 +58,12 @@ ul {
     margin-bottom: 40px;
 }
 
-.form-check {
+.formStyle {
     font-size: 20px;
     text-align: center;
     margin: 10px;
+    color: rgb(60, 0, 0);
+    padding: auto;
 }
 
 .submit_button {
@@ -68,6 +77,24 @@ ul {
 
 .images {
     align-content: center;
+}
+.button {
+    border: 1px solid;
+}
+
+.results {
+    border: 1px solid;
+    height: 1000px;
+    background-color: rgba(128,128,128,.8);
+    margin-bottom: 20px;
+    border-radius: .35rem;
+    padding: auto 60;
+    margin-top: 145px;
+}
+
+.timerStyle {
+    border: 1px solid;
+    text-align: center;
 }
 
 
